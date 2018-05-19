@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
-      title: {
+      user: {
         // Logger name
         type: DataTypes.STRING,
         allowNull: false,
@@ -8,9 +8,14 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      body: {
+      food: {
         // user input
         type: DataTypes.TEXT,
+        allowNull: false,
+        len: [1]
+      },
+      calories: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         len: [1]
       }
