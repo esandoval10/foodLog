@@ -1,0 +1,20 @@
+{
+  "name": "icandy",
+  "version": "1.0.0",
+  "description": "A site to log food and determine what junk food a person can eat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esandoval10/foodLog.git"
+  },
+  "author": "Team iCandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esandoval10/foodLog/issues"
+  },
+  "homepage": "https://github.com/esandoval10/foodLog#readme"
+}
