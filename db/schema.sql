@@ -24,5 +24,6 @@ CREATE TABLE user_data(
     user_name varchar(255) NOT NULL,
     food varchar(255) NOT NULL,
     calories int NOT NULL,
+    serving int NOT NULL,
     PRIMARY KEY (id)
 );
