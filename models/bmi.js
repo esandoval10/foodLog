@@ -1,29 +1,20 @@
-// Import the ORM to create functions that will interact with the database.
 var orm = require("../config/orm.js");
 
-var bmi = {
+var burger = {
   all: function(cb) {
     orm.all("bmi", function(res) {
       cb(res);
     });
   },
-  // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.create("bmi", cols, vals, function(res) {
-      cb(res);
-    });
+  create: function(name, cb) {
+    orm.create("bmi", [ "user_name", "gender", "age", "weight", "height", "waistSize", "activityLevel", "fatPercentage", "RMR", "caloriesPerDay" ], [ name, false ], cb);
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("bmi", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
-  delete: function(condition, cb) {
-    orm.delete("bmi", condition, function(res) {
-      cb(res);
-    });
+  update: function(id, cb) {
+    var condition = "id=" + id;
+    orm.update("user", {
+      devoured: true
+    }, condition, cb);
   }
 };
 
-// Export the database functions for the controller (bmiController.js).
-module.exports = bmi;
+module.exports = burger;
