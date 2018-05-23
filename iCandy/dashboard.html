@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Link to jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Materialize compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ICandy</title>
+</head>
+<head>
+    <style>
+        html, body, .my-wrapper {
+        height: 100%;
+     }
+        body {
+            background: #f5f5f5;
+        }
+        h5 {
+            font-weight: 400;
+        }
+      .container {
+        /* margin-top: 80px; */
+        width: 400px;
+        height: 700px;
+      }
+      
+      .tabs .indicator {
+        background-color:#e0f2f1;
+        height: 60px;
+        opacity: 0.3;
+      }
+      
+      .form-container {
+        /* padding: 40px;
+        padding-top: 10px; */
+      }
+      
+      .confirmation-tabs-btn {
+        /* position: absolute; */
+      }
+
+      .kraus {
+          margin-top: 50%;
+      }
+      
+      #bg {
+       position:absolute; 
+       left:0;
+       right:0;
+       bottom:0;
+       top:0;
+       overflow:hidden;
+       z-index:0;
+   }
+   #bg img {
+       width:100%;
+       min-width:100%;
+       min-height:100%;
+   }
+    </style> 
+</head>
+<body>
+        <!-- <div id="bg">
+                <img style="display:block;" src="candy-pants-01.jpg">
+             </div> -->
+<!--Modal Trigger-->
+   
+<!--Modal Login-->
+
+            <div class="container">
+                    <div class="row">
+                            <div class="input-field col s4">
+                              <input value="Alvin" id="first_name2" type="text" class="validate">
+                              <label class="active" for="first_name2">Name</label>
+                            </div>
+                            <div class="input-field col s12 m4">
+                                    <select class="icons">
+                                      <option value="" disabled selected>Age</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">18</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">19</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">20</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">21</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">22</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">23</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">24</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">25</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">26</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">27</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">28</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">29</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">30</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">31</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">32</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">33</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">34</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">35</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">36</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">37</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">38</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">39</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">40</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">41</option>
+                                    </select>
+                                    <label>Age</label>
+                                  </div>
+                                  <div class="input-field col s12 m4">
+                                    <select class="icons">
+                                      <option value="" disabled selected>Gender</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="left circle">Male</option>
+                                      <option value="" data-icon="images/office.jpg" class="left circle">Female</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="left circle">Other</option>
+                                    </select>
+                                    <label>Gender</label>
+                                  </div>
+                            
+                                
+                                  <div class="input-field col s12 m4">
+                                    <select class="icons">
+                                      <option value="" disabled selected>Height</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="circle">example 1</option>
+                                      <option value="" data-icon="images/office.jpg" class="circle">example 2</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="circle">example 3</option>
+                                    </select>
+                                    <label>Height</label>
+                                  </div>
+                                  <div class="input-field col s12 m4">
+                                    <select class="icons">
+                                      <option value="" disabled selected>Weight</option>
+                                      <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+                                      <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+                                      <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+                                    </select>
+                                    <label>Weight</label>
+                                  </div>
+                                  <div class="input-field col s12 m4">
+                                        <select class="icons">
+                                          <option value="" disabled selected>Waist</option>
+                                          <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+                                          <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+                                          <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+                                        </select>
+                                        <label>Waist</label>
+                                      </div>
+                                      <div class="input-field col s12 m4">
+                                            <select class="icons">
+                                              <option value="" disabled selected>Height</option>
+                                              <option value="" data-icon="images/sample-1.jpg" class="circle">example 1</option>
+                                              <option value="" data-icon="images/office.jpg" class="circle">example 2</option>
+                                              <option value="" data-icon="images/yuna.jpg" class="circle">example 3</option>
+                                            </select>
+                                            <label>Body Fat</label>
+                                          </div>
+                                          <div class="input-field col s12 m4">
+                                            <select class="icons">
+                                              <option value="" disabled selected>Weight</option>
+                                              <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+                                              <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+                                              <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+                                            </select>
+                                            <label>RMR</label>
+                                          </div>
+                                          <div class="input-field col s12 m4">
+                                                <select class="icons">
+                                                  <option value="" disabled selected>Waist</option>
+                                                  <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+                                                  <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+                                                  <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+                                                </select>
+                                                <label>CPD</label>
+                                              </div>
+                                      <div class="input-field col s12">
+                                            <select>
+                                              <option value="" disabled selected>Choose your option</option>
+                                              <option value="1">Option 1</option>
+                                              <option value="2">Option 2</option>
+                                              <option value="3">Option 3</option>
+                                            </select>
+                                            <label>Activity Level</label>
+                                          </div>
+                                        
+                                          
+                                        
+                                    
+                                
+                                  <label>Browser Select</label>
+                                  <select class="browser-default">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                  </select>
+                          </div>
+            </div>
+            
+    
+  
+</body>
+<script  src="./iCandy.js"></script>
+</html>
