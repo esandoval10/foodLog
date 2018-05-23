@@ -2,12 +2,12 @@ var orm = require("../config/orm.js");
 
 var burger = {
   all: function(cb) {
-    orm.all("bmi", function(res) {
+    orm.all("user", function(res) {
       cb(res);
     });
   },
   create: function(name, cb) {
-    orm.create("bmi", [ "user_name", "gender", "age", "weight", "height", "waistSize", "activityLevel", "fatPercentage", "RMR", "caloriesPerDay", "input_date" ], [ name, false ], cb);
+    orm.create("user", [ "user_name", "food", "calories", "serving", "input_date" ], [ name, false ], cb);
   },
   update: function(id, cb) {
     var condition = "id=" + id;
