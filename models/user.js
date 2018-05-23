@@ -7,7 +7,7 @@ var burger = {
     });
   },
   create: function(name, cb) {
-    orm.create("user", [ "user_name", "food", "calories", "serving" ], [ name, false ], cb);
+    orm.create("user", [ "user_name", "food", "calories", "serving", "input_date" ], [ name, false ], cb);
   },
   update: function(id, cb) {
     var condition = "id=" + id;

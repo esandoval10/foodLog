@@ -7,7 +7,7 @@ var burger = {
     });
   },
   create: function(name, cb) {
-    orm.create("bmi", [ "user_name", "gender", "age", "weight", "height", "waistSize", "activityLevel", "fatPercentage", "RMR", "caloriesPerDay" ], [ name, false ], cb);
+    orm.create("bmi", [ "user_name", "gender", "age", "weight", "height", "waistSize", "activityLevel", "fatPercentage", "RMR", "caloriesPerDay", "input_date" ], [ name, false ], cb);
   },
   update: function(id, cb) {
     var condition = "id=" + id;
