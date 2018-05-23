@@ -4,7 +4,7 @@ CREATE DATABASE icandy;
 
 USE icandy;
 
-CREATE TABLE bmi_data(
+CREATE TABLE user_data(
     id int auto_increment NOT NULL,
     user_name varchar(255) NOT NULL,
     gender varchar(255) NOT NULL,
@@ -16,14 +16,16 @@ CREATE TABLE bmi_data(
     fatPercentage decimal (4,2),
     RMR decimal (7,2), 
     caloriesPerDay decimal (7,2),
+    input_date timestamp not null default now(),
     PRIMARY KEY (id)
 );
 
-CREATE TABLE user_data(
+CREATE TABLE input_data(
     id int auto_increment NOT NULL,
     user_name varchar(255) NOT NULL,
     food varchar(255) NOT NULL,
     calories int NOT NULL,
     serving int NOT NULL,
+    input_date timestamp not null default now(),
     PRIMARY KEY (id)
 );
