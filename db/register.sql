@@ -1,0 +1,1 @@
+insert into userData (userName, gender, age, userWeight, height, waistSize, activityLevel) values ("John Stockton", "Male", 22, 220, 6.167, 32.56, 1.175);
