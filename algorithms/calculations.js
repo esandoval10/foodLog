@@ -31,6 +31,18 @@ var calculate = {
         user.caloriesPerDay = user.bmr * user.activityLevel;
     },
 
+    caloriesLeft: function(user, caloriesEaten){
+        var remainingCals = user.caloriesPerDay - caloriesEaten;
+
+        if (remainingCals > 0){
+            return remainingCals;
+        }
+
+        else{
+           return remainingCals += caloriesEaten
+        }
+    }
+
 };
 
 module.exports = calculate;
