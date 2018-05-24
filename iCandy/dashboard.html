@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Link to jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Favicon Code -->
+    <link rel="shortcut icon" type="image/png" href="iCandy-logo.png" />
     <!-- Materialize compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ICandy</title>
+    <title>iCandy</title>
 </head>
 
 <head>
@@ -168,7 +170,7 @@
 
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            
+
             <h1 class="header center teal-text">Welcome Back, Generic Username!</h1>
             <!-- <div class="row center">
                 <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
@@ -183,21 +185,23 @@
             <h5 class="header center teal-text">Can I eat it?</h5>
             <nav>
                 <div class="nav-wrapper">
-                  <form>
-                    <div class="input-field teal">
-                      <input id="search" type="search" required>
-                      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                      <i class="material-icons">close</i>
-                    </div>
-                  </form>
+                    <form>
+                        <div class="input-field teal">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search">
+                                <i class="material-icons">search</i>
+                            </label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
                 </div>
-              </nav>
+            </nav>
             <br>
             <br>
             <!-- <div class="row center">
                 <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
             </div> -->
-            
+
         </div>
     </div>
 
@@ -209,33 +213,33 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center light-blue-text">
-                            <i class="material-icons">flash_on</i>
+                            <i class="material-icons">thumb_up</i>
                         </h2>
                         <h5 class="center">Example Candy #1</h5>
 
-                        <p class="light">Calroie facts</p>
+                        <p class="light center">Calroie facts</p>
                     </div>
                 </div>
 
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center light-blue-text">
-                            <i class="material-icons">group</i>
+                            <i class="material-icons">thumb_up</i>
                         </h2>
                         <h5 class="center">Example Candy #2</h5>
 
-                        <p class="light">Calorie facts</p>
+                       <p class="light center">Calorie facts</p>
                     </div>
                 </div>
 
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center light-blue-text">
-                            <i class="material-icons">settings</i>
+                            <i class="material-icons">thumb_up</i>
                         </h2>
                         <h5 class="center">Example Candy #3</h5>
 
-                        <p class="light">Calorie facts</p>
+                        <p class="light center">Calorie facts</p>
                     </div>
                 </div>
             </div>
@@ -248,7 +252,25 @@
     <footer class="page-footer teal">
         <div class="container">
             <div class="row">
-               
+                <div class="input-field col s3">
+                    <input value="Food Item" name="fname" type="text" class="validate">
+                    <!-- <label class="active" for="fname" style="color: white">Food Item</label> -->
+                </div>
+                <div class="input-field col s2">
+                    <input value="Cleatingoff" name="lname" type="number" class="validate">
+                    <label class="active" for="lname" style="color: white">Serving Size</label>
+                </div>
+                <div class="input-field col s2">
+                    <input value="Cleatingoff" name="lname" type="number" class="validate">
+                    <label class="active" for="lname" style="color: white">Calories</label>
+                </div>
+                <div class="input-field col s3">
+                    <input value="Cleatingoff" name="lname" type="number" class="validate">
+                    <label class="active" for="lname" style="color: white">Date</label>
+                </div>
+                <div class="cl s2">
+                <a class="waves-effect waves-light btn" style="margin-top: 20px">Add Item</a>
+                </div>
             </div>
         </div>
         <div class="footer-copyright">
