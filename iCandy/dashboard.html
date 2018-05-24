@@ -9,6 +9,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Favicon Code -->
     <link rel="shortcut icon" type="image/png" href="iCandy-logo.png" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Materialize compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -113,6 +115,13 @@
         .footer-copyright {
             text-align: center;
         }
+
+        .panel-body a {
+      word-break: break-all;
+    }
+    .articleHeadline {
+      line-height: 1.5;
+    }
     </style>
 </head>
 
@@ -134,28 +143,28 @@
                     <img class="circle" src="iAvatar.png">
                 </a>
                 <a href="#!name">
-                    <span class="white-text name">John Doe</span>
+                    <span class="white-text name">Carl Junior</span>
                 </a>
                 <a href="#!email">
-                    <span class="white-text email">jdandturk@gmail.com</span>
+                    <span class="white-text email">carljunior@gmail.com</span>
                 </a>
             </div>
         </li>
         <li>
             <a href="#!">
-                <i class="material-icons">cloud</i>First Link With Icon</a>
+                <i class="material-icons">cloud</i>Hello, Carl!</a>
         </li>
         <li>
-            <a href="#!">Second Link</a>
+            <a href="#!">May, 24 2018</a>
         </li>
         <li>
             <div class="divider"></div>
         </li>
         <li>
-            <a class="subheader">Subheader</a>
+            <a class="subheader">Snack History</a>
         </li>
         <li>
-            <a class="waves-effect" href="#!">Third Link With Waves</a>
+            <a class="waves-effect" href="#!">Can I eat it?</a>
         </li>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse">
@@ -185,14 +194,21 @@
             <h5 class="header center teal-text">Can I eat it?</h5>
             <nav>
                 <div class="nav-wrapper">
-                    <form>
-                        <div class="input-field teal">
-                            <input id="search" type="search" required>
+                    <!-- SEARCH FORM BEGINS -->
+                    <form role="form">
+                        <!-- Here we create the text box for capturing the search term-->
+                        <div class="input-field white form-group">
+                            <input id="search-term" class="form-control" type="search" required>
                             <label class="label-icon" for="search">
                                 <i class="material-icons">search</i>
                             </label>
                             <i class="material-icons">close</i>
                         </div>
+                        <!-- Here we have our final submit button -->
+                        <a type="submit" class="waves-effect waves-light btn" id="run-search">
+                            <i class="fa fa-search left" style="margin-top: -15px"></i>Search</a>
+                        <a type="button" class="waves-effect waves-light btn" id="clear-all">
+                            <i class="fa fa-trash left" style="margin-top: -15px"></i>Clear Results</a>
                     </form>
                 </div>
             </nav>
@@ -204,75 +220,28 @@
 
         </div>
     </div>
-
-    <div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text">
-                            <i class="material-icons">thumb_up</i>
-                        </h2>
-                        <h5 class="center">Example Candy #1</h5>
-
-                        <p class="light center">Calroie facts</p>
+    <br>
+    <!-- This row will handle all of the retrieved articles -->
+    <div class="container" style="width: 68%">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong><i class="fa fa-table"></i> Foods</strong>
+                        </h3>
                     </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text">
-                            <i class="material-icons">thumb_up</i>
-                        </h2>
-                        <h5 class="center">Example Candy #2</h5>
-
-                       <p class="light center">Calorie facts</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text">
-                            <i class="material-icons">thumb_up</i>
-                        </h2>
-                        <h5 class="center">Example Candy #3</h5>
-
-                        <p class="light center">Calorie facts</p>
+                    <!-- This main panel will hold each of the resulting articles -->
+                    <div class="panel-body" id="well-section">
                     </div>
                 </div>
             </div>
-
         </div>
-        <br>
-        <br>
     </div>
 
+    <!-- Footer -->
     <footer class="page-footer teal">
-        <div class="container">
-            <div class="row">
-                <div class="input-field col s3">
-                    <input value="Food Item" name="fname" type="text" class="validate">
-                    <!-- <label class="active" for="fname" style="color: white">Food Item</label> -->
-                </div>
-                <div class="input-field col s2">
-                    <input value="Cleatingoff" name="lname" type="number" class="validate">
-                    <label class="active" for="lname" style="color: white">Serving Size</label>
-                </div>
-                <div class="input-field col s2">
-                    <input value="Cleatingoff" name="lname" type="number" class="validate">
-                    <label class="active" for="lname" style="color: white">Calories</label>
-                </div>
-                <div class="input-field col s3">
-                    <input value="Cleatingoff" name="lname" type="number" class="validate">
-                    <label class="active" for="lname" style="color: white">Date</label>
-                </div>
-                <div class="cl s2">
-                <a class="waves-effect waves-light btn" style="margin-top: 20px">Add Item</a>
-                </div>
-            </div>
-        </div>
+
         <div class="footer-copyright">
             <div class="container">
                 iCandy 2018
@@ -283,7 +252,8 @@
 
 </body>
 <script src="./iCandy.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./foodApi.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
 </html>
